@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -13,18 +12,39 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body:Padding(
-        padding: const EdgeInsets.all(16.0), /// Menambahkan padding di sekitar konten
-        child: Center(
-          child: Text(
-            'Halaman Login',
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.black87,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+
+        /// Menambahkan padding di sekitar konten
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                'Halaman Login',
+                style: TextStyle(fontSize: 24, color: Colors.black87),
+              ),
             ),
-          ),
+            const SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Username',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Password',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+              ),
+            ),
+          ],
         ),
-      )
+      ),
     );
   }
 }
