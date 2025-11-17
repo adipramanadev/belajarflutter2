@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'login.dart';
+
+/// Mengimpor paket Flutter Material
 
 /// untuk mengimpor paket Flutter Material
 
@@ -13,17 +16,12 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp( // Menggunakan MaterialApp sebagai root widget
-      home: BelajarFlutter(),  /// Menetapkan BelajarFlutter sebagai halaman utama
+    return MaterialApp(
+      // Menggunakan MaterialApp sebagai root widget
+      debugShowCheckedModeBanner: false, // Menonaktifkan banner debug
+      home: Login(),
+
+      /// Menetapkan Login sebagai halaman utama
     );
-  }
-}
-
-class BelajarFlutter extends StatelessWidget {
-  const BelajarFlutter({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
